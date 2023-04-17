@@ -23,7 +23,6 @@ const fileLoad = (e) => {
     let finalImageUrl = URL.createObjectURL(fileInputUrl);
     let imgTag = `<img src="${finalImageUrl}" >`;
     dragArea.innerHTML = imgTag;
-    dragArea.innerHTML = imgTag;
     createDownload = ` <a href="${finalImageUrl}"  download >download</a>`;
     downloadBtn.innerHTML = createDownload;
 };
@@ -57,7 +56,7 @@ dragArea.addEventListener("drop", (e) => {
              imgTag = `<img src="${fileUrl}" >`;
             dragArea.innerHTML = imgTag;
             createDownload = ` <a class="download" href="${fileUrl}"  download >download</a>`;
-            createDownload.innerText = 'downloading..'
+            downloadBtn.innerHTML = createDownload;
         };
         fileReader.readAsDataURL(file);
      
